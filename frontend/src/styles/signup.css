@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+* {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-sign {
+  width: 100vw;
+  height: 120vh;
+  display: grid;
+  place-items: center;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.form-div-sign {
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 40%;
+  height: 93%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 3;
+  backdrop-filter: blur(14px);
+  box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.75);
+}
+
+.video-div-sign {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.video-div-sign video {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.form-div-sign > form {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  margin-top: 2.1rem;
+}
+
+form > div {
+  width: 90%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+form > div > label {
+  position: absolute;
+  left: 0.8rem;
+  top: 0.2rem;
+  transition: 0.5s ease-in-out;
+  color: gray;
+  font-weight: 480;
+  font-size: 1.1rem;
+}
+
+form > div > input {
+  width: 100%;
+  margin-left: 0.7rem;
+  height: 2.1rem;
+  border: none;
+  outline: none;
+  padding: 3px 10px;
+  font-size: 1rem;
+  background-color: rgba(245, 245, 245, 0.685);
+  color: gray;
+}
+
+form > div > input:focus {
+  border-bottom: 3px solid rgb(39, 168, 39);
+}
+
+form > div > input:invalid {
+  border-bottom: 3px solid red;
+}
+
+form > button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 14px;
+  background-color: rgba(128, 128, 128, 0.108);
+  color: white;
+  transition: 0.5s ease;
+}
+
+form > button:hover {
+  background-color: rgba(128, 128, 128, 0.316);
+}
+
+.loader-div-sign {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#gender {
+  border: none;
+  outline: none;
+  padding: 0.2rem;
+  font-size: 1rem;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 912px) {
+  .form-div-sign {
+    width: 60%;
+  }
+}
+
+@media (max-width: 712px) {
+  .form-div-sign {
+    width: 70%;
+  }
+}
+
+@media (max-width: 455px) {
+  .form-div-sign {
+    width: 90%;
+  }
+
+  .form-div-sign div input {
+    height: 1.8rem;
+  }
+}

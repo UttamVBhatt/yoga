@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+.user_name {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 6px;
+}
+
+.home-header {
+  background: linear-gradient(100deg, #ff8c00, #ffa500);
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-header .content-container {
+  width: 73%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.home-header .menu {
+  display: none;
+  cursor: pointer;
+}
+
+.cross {
+  display: none;
+}
+
+.cross span {
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 100%;
+  background-color: white;
+  padding: 4px 10px;
+}
+
+@media (max-width: 910px) {
+  .home-header .content-container {
+    flex-direction: column;
+    position: absolute;
+    top: 0%;
+    right: -100%;
+    justify-content: center;
+    height: 50%;
+    z-index: 5;
+    padding-bottom: 3.2rem;
+    background: linear-gradient(100deg, #ff8c003a, #ffa60044);
+    backdrop-filter: blur(21px);
+  }
+
+  .cross {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .cross span {
+    margin-left: 1rem;
+  }
+
+  .home-header .menu {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .home-header .menu .hamburger {
+    width: 3rem;
+    height: 0.3rem;
+    background-color: white;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .home-header.content-container.nav-active {
+    right: 0%;
+  }
+
+  .home-header.menu.nav-active
+    .home-header.menu.home-header.menu.nav-active
+    .hamburger:first-child {
+    transform: translateX(45deg);
+  }
+
+  .home-header.menu.nav-active
+    .home-header.menu.home-header.menu.nav-active
+    .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .home-header.menu.nav-active
+    .home-header.menu.home-header.menu.nav-active
+    .hamburger:last-child {
+    transform: translateX(-45deg);
+  }
+}
+
+.home-header .content-container p {
+  font-size: 1.7rem;
+  color: whitesmoke;
+  margin-top: 0.7rem;
+  position: relative;
+}
+
+.btn-logOut {
+  border: none;
+  outline: none;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.092);
+  /* border: 1px solid rgba(128, 128, 128, 0.063); */
+  color: white;
+  margin-top: 0.3rem;
+  transition: 0.5s all ease;
+}
+
+.btn-logOut:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.home-header .content-container p span {
+  color: black;
+}
+
+.home-container {
+  background: black;
+}
+.header-btn:hover {
+  border-color: white;
+}
+
+.home-heading {
+  padding: 0px;
+  margin: 0px;
+  font-size: 44px;
+  margin-left: 30px;
+  color: white;
+  font-family: "Kaushan Script", cursive;
+}
+
+.home-main {
+  margin: auto;
+  margin-top: -50px;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../../utils/images/yoga_pose.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 750px;
+}
+
+.description {
+  font-size: 66px;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.btn-section {
+  position: absolute;
+  left: 38vw;
+  top: 60vh;
+}
+
+.btn {
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 10px 20px 10px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  font-size: 24px;
+  border-color: #ffa500;
+  border-radius: 8px;
+  border-width: 4px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: rgba(255, 165, 0, 0.2);
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+#about-btn {
+  padding: 5px 10px;
+}
+#about-btn:hover {
+  border-color: white;
+  background-color: white;
+  color: black;
+}
+#about-btn:focus {
+  box-shadow: none;
+  background: white;
+  border-color: white;
+  color: black;
+}
